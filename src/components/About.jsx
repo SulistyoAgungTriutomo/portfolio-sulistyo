@@ -27,7 +27,7 @@ const About = () => {
             </h3>
 
             <p className="text-text-muted leading-relaxed text-sm md:text-base">
-              I am a 5th-semester student at Bina Nusantara University, majoring in Computer Science with a focus on Networking. I have strong communication skills and a high interest in collaborative teamwork. My one-year experience as a volunteer with HIMTI (Himpunan Mahasiswa Teknik Informatika) and the Binus TV Club has enriched my practical knowledge and skills in the field of information technology.
+              I am a Computer Science student at Bina Nusantara University specializing in Computer Networks and Infrastructure. Driven by a passion for practical technology and collaborative problem-solving, I have built a strong foundation in IT through active involvement in organizations like HIMTI and BINUS TV Club. Combined with strong communication skills and a team-first mindset, I thrive in dynamic environments where technology and teamwork intersect.
             </p>
 
             {/* Grid Detail Info */}
