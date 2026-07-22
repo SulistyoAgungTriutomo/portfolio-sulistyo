@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, FileText } from 'lucide-react';
+import { ExternalLink, FileText, ArrowLeft } from 'lucide-react';
 
 // === DATA PORTOFOLIO ===
 const portfolioData = [
@@ -94,10 +94,43 @@ const portfolioData = [
     'Following an evaluation of K-Means, Gaussian Mixture Model (GMM), and Hierarchical Clustering, Hierarchical Clustering with five clusters (K=5) emerged as the optimal model for customer segmentation. Additionally, Association Rule Mining via the Apriori algorithm was applied to detect product association patterns for cross-selling and bundling packages.',
     'The research outputs were visualized in an interactive E-Commerce Behavioral Analytics Dashboard to support personalized promotions, optimize conversion funnels, and assist strategic decision-making for platform management.'
   ]
+},
+{
+  id: 5,
+  title: 'Strive',
+  category: 'Web Application / Education & Productivity / Gamified Habit Tracker',
+  shortDesc: 'Implementation of Gamification in Habit Tracking Applications for University Students.',
+  images: [
+    '/Strive/1.png',
+    '/Strive/2.png',
+    '/Strive/3.png',
+    '/Strive/4.png',
+    '/Strive/5.png',
+    '/Strive/6.png',
+    '/Strive/7.png',
+    '/Strive/8.png',
+    '/Strive/9.png',
+    '/Strive/10.png',
+    '/Strive/11.png',
+    '/Strive/12.png',
+    '/Strive/13.png',
+    '/Strive/14.png'
+  ],
+  techStack: 'React.js / Next.js, Tailwind CSS, Supabase (Auth, PostgreSQL, Realtime), Git, Vercel',
+  url: 'https://github.com/SulistyoAgungTriutomo/strive-app', 
+  fullDesc: [
+    'Strive App is a web-based habit-tracking application designed specifically to help university students build, manage, and sustain positive routines amidst demanding academic schedules. By incorporating gamification, Strive transforms the often monotonous process of habit building into an engaging, interactive, and motivating experience.',
+    'Key Features & Highlights:',
+    '• Gamified Progress System: Utilizes streak tracking, points, and visual rewards to encourage daily consistency and user retention.',
+    '• Student-Centric Dashboard: Features a clean, intuitive interface tailored to align with student daily schedules and academic workflows.',
+    '• Real-Time Analytics: Offers visual summaries of daily and weekly performance, allowing users to accurately assess their growth over time.',
+    '• Reliable Data Infrastructure: Leverages Supabase for seamless user authentication, real-time updates, and secure data storage.'
+  ]
 }
 ];
 
-const filters = ['All', 'Web', 'AI', 'Cloud'];
+// Daftar Filter yang sudah disesuaikan
+const filters = ['All', 'Web Apps', 'UI/UX', 'AI & Data', 'Cloud & DevOps'];
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -115,6 +148,19 @@ const Portfolio = () => {
     return () => clearInterval(slideInterval);
   }, [selectedProject]);
 
+  // Fungsi untuk memfilter proyek berdasarkan kategori
+  const filteredProjects = portfolioData.filter((project) => {
+    if (activeFilter === 'All') return true;
+    
+    const cat = project.category.toLowerCase();
+    if (activeFilter === 'Web Apps') return cat.includes('web');
+    if (activeFilter === 'UI/UX') return cat.includes('ui/ux');
+    if (activeFilter === 'AI & Data') return cat.includes('artificial intelligence') || cat.includes('data mining') || cat.includes('machine learning');
+    if (activeFilter === 'Cloud & DevOps') return cat.includes('cloud') || cat.includes('devops');
+    
+    return false;
+  });
+
   return (
     <section id="portfolio" className="py-12 px-6 md:px-16 bg-dark-bg text-white min-h-screen">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -127,15 +173,36 @@ const Portfolio = () => {
                 Portfolio
               </h2>
               <p className="text-text-muted text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                A collection of my work — showcasing projects that highlight my skills, creativity, and passion for development.
+                A collection of my work showcasing projects that highlight my skills, creativity, and passion for development.
               </p>
             </div>
 
+            {/* Tombol Filter Kategori */}
+            <div className="flex justify-center gap-3 flex-wrap mb-10">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                    activeFilter === filter
+                      ? 'bg-accent-green text-black shadow-lg shadow-accent-green/20'
+                      : 'bg-[#141414] text-text-muted hover:text-white border border-white/10'
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+
+            {/* Grid Proyek (Menggunakan filteredProjects) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-              {portfolioData.map((project) => (
+              {filteredProjects.map((project) => (
                 <div 
                   key={project.id}
-                  onClick={() => setSelectedProject(project)}
+                  onClick={() => {
+                    setSelectedProject(project);
+                    setCurrentSlide(0); // Reset slider setiap kali buka project baru
+                  }}
                   className="bg-[#141414] rounded-2xl overflow-hidden cursor-pointer border border-white/5 hover:border-accent-green/50 transition-all duration-300 group"
                 >
                   <div className="h-64 overflow-hidden relative">
@@ -157,13 +224,29 @@ const Portfolio = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* Pesan jika filter tidak menemukan proyek */}
+              {filteredProjects.length === 0 && (
+                <div className="col-span-full text-center text-text-muted py-10">
+                  No projects found in this category.
+                </div>
+              )}
             </div>
           </div>
         )}
 
         {/* --- TAMPILAN 2: DETAIL PROJECT --- */}
         {selectedProject && (
-          <div className="space-y-10 animate-fade-in">
+          <div className="space-y-10 animate-fade-in relative">
+            
+            {/* Tombol Back to Portfolio */}
+            <button 
+              onClick={() => setSelectedProject(null)}
+              className="inline-flex items-center gap-2 text-text-muted hover:text-accent-green transition-colors duration-300 mb-4 font-medium"
+            >
+              <ArrowLeft size={20} />
+              Back to Projects
+            </button>
             
             {/* Judul Project Tengah */}
             <div className="text-center pt-2">
@@ -213,7 +296,6 @@ const Portfolio = () => {
                       <span className="text-text-muted">{selectedProject.category}</span>
                     </div>
 
-                    {/* Format Teks Biasa Tanpa Box / Tanpa Warna Hijau */}
                     {selectedProject.publication && (
                       <div>
                         <span className="font-bold text-white block mb-1">Research Paper:</span>
@@ -257,7 +339,6 @@ const Portfolio = () => {
                       </a>
                     )}
 
-                    {/* Tombol PDF Paper */}
                     {selectedProject.paperUrl && (
                       <a 
                         href={selectedProject.paperUrl}

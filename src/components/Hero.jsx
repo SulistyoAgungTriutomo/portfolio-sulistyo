@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-dark-bg">
-      {/* 1. Video Background (Full sampai ke atas layar) */}
+      {/* 1. Video Background */}
       <video
         autoPlay
         loop
@@ -13,21 +13,20 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none z-0"
       >
         <source src="/hero-bg.mp4" type="video/mp4" />
-        Browser kamu tidak mendukung pemutaran video background.
       </video>
 
       {/* 2. Gradient Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(10,10,10,0.5)_95%)] pointer-events-none z-0"></div>
 
-      {/* 3. Konten Utama (Diberi pt-20 di dalam container agar teks tidak tertutup navbar) */}
-      <div className="z-10 space-y-5 flex flex-col items-start text-left max-w-3xl mx-auto pt-20">
+      {/* 3. Konten Utama */}
+      <div className="z-10 space-y-5 flex flex-col items-start text-left max-w-3xl mx-auto pt-24 md:pt-20 w-full">
         {/* Nama Utama */}
         <h1 className="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-tight drop-shadow-lg">
           Sulistyo Agung Triutomo
         </h1>
 
         {/* Subtitle / Animasi Ketik */}
-        <div className="text-lg md:text-2xl text-white font-medium flex items-center gap-2 drop-shadow-md">
+        <div className="text-base md:text-2xl text-white font-medium flex flex-wrap items-center gap-2 drop-shadow-md">
           <span>I'm a</span>
           <span className="text-white border-b-2 border-accent-green pb-0.5 inline-block">
             <Typewriter
@@ -48,11 +47,12 @@ const Hero = () => {
         </div>
 
         {/* Tombol Aksi & Sosial Media */}
-        <div className="flex items-center gap-4 pt-2">
+        <div className="flex items-center gap-3 md:gap-4 pt-2 flex-wrap">
           <a
             href="https://www.linkedin.com/in/sulistyo-agung-triutomo"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="w-10 h-10 rounded-full bg-card-bg/80 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
           >
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -62,6 +62,7 @@ const Hero = () => {
 
           <a
             href="mailto:triutomosulistyo@gmail.com"
+            aria-label="Email"
             className="w-10 h-10 rounded-full bg-card-bg/80 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
           >
             <Mail size={18} />
@@ -70,7 +71,7 @@ const Hero = () => {
           <a
             href="/SulistyoAgungTriutomo_CV.pdf"
             target="_blank"
-            className="px-5 py-2 rounded-full bg-accent-green text-black font-semibold hover:brightness-110 transition duration-300 text-xs md:text-sm shadow-lg shadow-accent-green/20"
+            className="px-5 py-2.5 rounded-full bg-accent-green text-black font-semibold hover:brightness-110 transition duration-300 text-xs md:text-sm shadow-lg shadow-accent-green/20"
           >
             Sulistyo's CV
           </a>
