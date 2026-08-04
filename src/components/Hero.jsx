@@ -69,7 +69,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/SulistyoAgungTriutomo_CV.pdf"
+            href="/CV.pdf"
             target="_blank"
             className="px-5 py-2.5 rounded-full bg-accent-green text-black font-semibold hover:brightness-110 transition duration-300 text-xs md:text-sm shadow-lg shadow-accent-green/20"
           >
