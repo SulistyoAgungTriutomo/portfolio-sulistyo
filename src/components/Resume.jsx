@@ -5,20 +5,16 @@ const Resume = () => {
   const experienceData = [
     {
       title: "IT Support pada Divisi Teknologi Informasi",
-      period: "September 2026 – Present",
+      period: "September 21, 2026 – Present",
       company: "PT TASPEN (Persero)",
-      points: [
-        "Responsible for handling IT support services, troubleshooting hardware/software issues, and maintaining system infrastructure within the IT Division.",
-        "Assisting internal staff with technical queries, user administration, and system reliability."
-      ]
+      points: [] // Dikosongkan sementara
     },
     {
       title: "Finance Support System Intern",
-      period: "May 2026 – September 2026",
+      period: "May 2026 – Sept 2026",
       company: "PT. Sumber Alfaria Trijaya, Tbk (Alfamart)",
       points: [
-        "Developed web dashboards & submission tools using Python, HTML/CSS, and PostgreSQL to digitize internal finance workflows.",
-        "Automated manual data handling, significantly improving process efficiency and reporting accuracy for finance operations."
+        "Developed web dashboards & submission tools using Python, HTML/CSS, and PostgreSQL to digitize internal finance workflows."
       ]
     },
     {
@@ -120,11 +116,15 @@ const Resume = () => {
                     <p className="text-accent-green text-sm font-medium mb-3">
                       {exp.company}
                     </p>
-                    <ul className="list-disc list-outside ml-4 space-y-2 text-text-muted text-xs md:text-sm leading-relaxed">
-                      {exp.points.map((point, i) => (
-                        <li key={i}>{point}</li>
-                      ))}
-                    </ul>
+                    
+                    {/* Hanya tampilkan list jika points tidak kosong */}
+                    {exp.points && exp.points.length > 0 && (
+                      <ul className="list-disc list-outside ml-4 space-y-2 text-text-muted text-xs md:text-sm leading-relaxed">
+                        {exp.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}
