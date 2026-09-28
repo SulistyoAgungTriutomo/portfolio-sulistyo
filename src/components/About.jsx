@@ -1,4 +1,26 @@
+import React from 'react';
+
 const About = () => {
+  // Fungsi untuk menghitung umur secara dinamis
+  const calculateAge = (birthDateString) => {
+    const today = new Date();
+    const birthDate = new Date(birthDateString);
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    // Kurangi 1 tahun jika bulan ini belum melewati bulan lahir, 
+    // atau jika bulannya sama tapi tanggalnya belum lewat
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
+  // Memasukkan tanggal lahir: 27 Oktober 2004 (Format YYYY-MM-DD)
+  const currentAge = calculateAge('2004-10-27');
+
   return (
     <section id="about" className="py-16 md:py-24 px-6 md:px-16 bg-dark-bg">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
@@ -36,11 +58,14 @@ const About = () => {
                 <strong className="text-white shrink-0">Name:</strong>
                 <span className="text-text-muted truncate">Sulistyo Agung Triutomo</span>
               </div>
+              
+              {/* Bagian Umur yang Sudah Dinamis */}
               <div className="flex items-center gap-2">
                 <span className="text-accent-green font-bold text-lg">&gt;</span>
                 <strong className="text-white shrink-0">Age:</strong>
-                <span className="text-text-muted">21</span>
+                <span className="text-text-muted">{currentAge}</span>
               </div>
+              
               <div className="flex items-center gap-2">
                 <span className="text-accent-green font-bold text-lg">&gt;</span>
                 <strong className="text-white shrink-0">City:</strong>
