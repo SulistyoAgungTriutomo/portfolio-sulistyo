@@ -133,7 +133,8 @@ const portfolioData = [
     category: 'Web Application / Enterprise System / Finance Automation',
     shortDesc: 'Centralized web-based monitoring, aging calculation, and reconciliation system for store outstanding & cash differences at Alfamart.',
     images: [
-      '/Alfamart/1.png'
+      '/Alfa/1.png',
+      '/Alfa/2.png'
     ],
     techStack: 'Python 3.11, Flask, PostgreSQL, PyJWT, Pandas, OpenPyXL, JavaScript (ES6+), DataTables, Waitress WSGI',
     url: '-',
