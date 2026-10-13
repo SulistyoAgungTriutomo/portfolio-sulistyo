@@ -72,61 +72,81 @@ const portfolioData = [
     ]
   },
   {
-  id: 4,
-  title: 'Data Mining for Discovering Consumer Behavioral Patterns in E-Commerce',
-  category: 'Data Mining / Machine Learning / E-Commerce Analytics',
-  shortDesc: 'Customer segmentation and market basket analysis using CRISP-DM framework to reduce cart abandonment.',
-  images: [
-    '/DataMining/1.png', 
-    '/DataMining/2.png',
-    '/DataMining/3.png',
-    '/DataMining/4.png',
-    '/DataMining/5.png',
-    '/DataMining/6.png',
-    '/DataMining/7.png',
-  ],
-  techStack: 'Python, CRISP-DM, Hierarchical Clustering, Apriori Algorithm, Scikit-learn, Analytics Dashboard',
-  url: '-', 
-  publication: 'Paper Accepted at ICCSCI (International Conference on Computer Science and Computational Intelligence) 2026 - Procedia Computer Science (Elsevier)', 
-  paperUrl: '/DataMining/paper.pdf', 
-  fullDesc: [
-    'This research applies data mining methods based on the CRISP-DM framework to analyze 25,000 transaction interactions, addressing high shopping cart abandonment rates and designing targeted marketing strategies in e-commerce.',
-    'Following an evaluation of K-Means, Gaussian Mixture Model (GMM), and Hierarchical Clustering, Hierarchical Clustering with five clusters (K=5) emerged as the optimal model for customer segmentation. Additionally, Association Rule Mining via the Apriori algorithm was applied to detect product association patterns for cross-selling and bundling packages.',
-    'The research outputs were visualized in an interactive E-Commerce Behavioral Analytics Dashboard to support personalized promotions, optimize conversion funnels, and assist strategic decision-making for platform management.'
-  ]
-},
-{
-  id: 5,
-  title: 'Strive',
-  category: 'Web Application / Education & Productivity / Gamified Habit Tracker',
-  shortDesc: 'Implementation of Gamification in Habit Tracking Applications for University Students.',
-  images: [
-    '/Strive/1.png',
-    '/Strive/2.png',
-    '/Strive/3.png',
-    '/Strive/4.png',
-    '/Strive/5.png',
-    '/Strive/6.png',
-    '/Strive/7.png',
-    '/Strive/8.png',
-    '/Strive/9.png',
-    '/Strive/10.png',
-    '/Strive/11.png',
-    '/Strive/12.png',
-    '/Strive/13.png',
-    '/Strive/14.png'
-  ],
-  techStack: 'React.js / Next.js, Tailwind CSS, Supabase (Auth, PostgreSQL, Realtime), Git, Vercel',
-  url: 'https://github.com/SulistyoAgungTriutomo/strive-app', 
-  fullDesc: [
-    'Strive App is a web-based habit-tracking application designed specifically to help university students build, manage, and sustain positive routines amidst demanding academic schedules. By incorporating gamification, Strive transforms the often monotonous process of habit building into an engaging, interactive, and motivating experience.',
-    'Key Features & Highlights:',
-    '• Gamified Progress System: Utilizes streak tracking, points, and visual rewards to encourage daily consistency and user retention.',
-    '• Student-Centric Dashboard: Features a clean, intuitive interface tailored to align with student daily schedules and academic workflows.',
-    '• Real-Time Analytics: Offers visual summaries of daily and weekly performance, allowing users to accurately assess their growth over time.',
-    '• Reliable Data Infrastructure: Leverages Supabase for seamless user authentication, real-time updates, and secure data storage.'
-  ]
-}
+    id: 4,
+    title: 'Data Mining for Discovering Consumer Behavioral Patterns in E-Commerce',
+    category: 'Data Mining / Machine Learning / E-Commerce Analytics',
+    shortDesc: 'Customer segmentation and market basket analysis using CRISP-DM framework to reduce cart abandonment.',
+    images: [
+      '/DataMining/1.png', 
+      '/DataMining/2.png',
+      '/DataMining/3.png',
+      '/DataMining/4.png',
+      '/DataMining/5.png',
+      '/DataMining/6.png',
+      '/DataMining/7.png',
+    ],
+    techStack: 'Python, CRISP-DM, Hierarchical Clustering, Apriori Algorithm, Scikit-learn, Analytics Dashboard',
+    url: '-', 
+    publication: 'Paper Accepted at ICCSCI (International Conference on Computer Science and Computational Intelligence) 2026 - Procedia Computer Science (Elsevier)', 
+    paperUrl: '/DataMining/paper.pdf', 
+    fullDesc: [
+      'This research applies data mining methods based on the CRISP-DM framework to analyze 25,000 transaction interactions, addressing high shopping cart abandonment rates and designing targeted marketing strategies in e-commerce.',
+      'Following an evaluation of K-Means, Gaussian Mixture Model (GMM), and Hierarchical Clustering, Hierarchical Clustering with five clusters (K=5) emerged as the optimal model for customer segmentation. Additionally, Association Rule Mining via the Apriori algorithm was applied to detect product association patterns for cross-selling and bundling packages.',
+      'The research outputs were visualized in an interactive E-Commerce Behavioral Analytics Dashboard to support personalized promotions, optimize conversion funnels, and assist strategic decision-making for platform management.'
+    ]
+  },
+  {
+    id: 5,
+    title: 'Strive',
+    category: 'Web Application / Education & Productivity / Gamified Habit Tracker',
+    shortDesc: 'Implementation of Gamification in Habit Tracking Applications for University Students.',
+    images: [
+      '/Strive/1.png',
+      '/Strive/2.png',
+      '/Strive/3.png',
+      '/Strive/4.png',
+      '/Strive/5.png',
+      '/Strive/6.png',
+      '/Strive/7.png',
+      '/Strive/8.png',
+      '/Strive/9.png',
+      '/Strive/10.png',
+      '/Strive/11.png',
+      '/Strive/12.png',
+      '/Strive/13.png',
+      '/Strive/14.png'
+    ],
+    techStack: 'React.js / Next.js, Tailwind CSS, Supabase (Auth, PostgreSQL, Realtime), Git, Vercel',
+    url: 'https://github.com/SulistyoAgungTriutomo/strive-app', 
+    fullDesc: [
+      'Strive App is a web-based habit-tracking application designed specifically to help university students build, manage, and sustain positive routines amidst demanding academic schedules. By incorporating gamification, Strive transforms the often monotonous process of habit building into an engaging, interactive, and motivating experience.',
+      'Key Features & Highlights:',
+      '• Gamified Progress System: Utilizes streak tracking, points, and visual rewards to encourage daily consistency and user retention.',
+      '• Student-Centric Dashboard: Features a clean, intuitive interface tailored to align with student daily schedules and academic workflows.',
+      '• Real-Time Analytics: Offers visual summaries of daily and weekly performance, allowing users to accurately assess their growth over time.',
+      '• Reliable Data Infrastructure: Leverages Supabase for seamless user authentication, real-time updates, and secure data storage.'
+    ]
+  },
+  {
+    id: 6,
+    title: 'Financial Outstanding Monitoring System & Executive Dashboard',
+    category: 'Web Application / Enterprise System / Finance Automation',
+    shortDesc: 'Centralized web-based monitoring, aging calculation, and reconciliation system for store outstanding & cash differences at Alfamart.',
+    images: [
+      '/Alfamart/1.png'
+    ],
+    techStack: 'Python 3.11, Flask, PostgreSQL, PyJWT, Pandas, OpenPyXL, JavaScript (ES6+), DataTables, Waitress WSGI',
+    url: '-',
+    fullDesc: [
+      'Financial Outstanding Monitoring System & Executive Dashboard is an enterprise web application developed for the Finance Division at PT. Sumber Alfaria Trijaya, Tbk (Alfamart). The platform centralizes, categorizes (aging B to >B-3), reconciles, and reports store outstanding deposits and cash differences across national branches.',
+      'Key Features & Technical Implementations:',
+      '• Automated Aging Engine: Built using Python & Flask to calculate outstanding balances, automate netting of cash differences, and detect negative balance anomalies.',
+      '• Centralized SSO & RBAC: Integrated PyJWT token-based Single Sign-On with Role-Based Access Control to restrict access to sensitive features like data imports.',
+      '• Automated Reconciliation & Subsequent Detection: Processes monthly bulk Excel uploads with pre-storage validation and post-cutoff payment calculation.',
+      '• Executive Dashboard & Reporting: Features real-time KPI cards, DataTables matrix views, and multi-tab Excel report generation (National Summary, Branch Recap, Transaction Details) via Pandas and OpenPyXL.',
+      '• Measurable Business Impact: Reduced monthly reconciliation processing time from several days to just minutes while eliminating human calculation errors.'
+    ]
+  }
 ];
 
 // Daftar Filter yang sudah disesuaikan
