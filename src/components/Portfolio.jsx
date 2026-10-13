@@ -129,23 +129,25 @@ const portfolioData = [
   },
   {
     id: 6,
-    title: 'Financial Outstanding Monitoring System & Executive Dashboard',
+    title: 'Alfamart Finance Portal Ecosystem & Executive Monitoring Systems',
     category: 'Web Application / Enterprise System / Finance Automation',
-    shortDesc: 'Centralized web-based monitoring, aging calculation, and reconciliation system for store outstanding & cash differences at Alfamart.',
+    shortDesc: 'Centralized Hub-and-Spoke web ecosystem for financial monitoring, aging calculation, and automated reporting at Alfamart.',
     images: [
       '/Alfa/1.png',
       '/Alfa/2.png'
     ],
-    techStack: 'Python 3.11, Flask, PostgreSQL, PyJWT, Pandas, OpenPyXL, JavaScript (ES6+), DataTables, Waitress WSGI',
+    techStack: 'Python 3.11+, Flask, Waitress WSGI, PostgreSQL, Oracle DB, PyJWT, Pandas, HTML5, CSS3, JavaScript (ES6+)',
     url: '-',
     fullDesc: [
-      'Financial Outstanding Monitoring System & Executive Dashboard is an enterprise web application developed for the Finance Division at PT. Sumber Alfaria Trijaya, Tbk (Alfamart). The platform centralizes, categorizes (aging B to >B-3), reconciles, and reports store outstanding deposits and cash differences across national branches.',
+      'Alfamart Finance Portal Ecosystem & Executive Monitoring Systems is a centralized web platform built using a Hub-and-Spoke / microservices-inspired architecture. It unifies multiple internal financial sub-applications and operational tools into a single portal for the Finance Division at PT. Sumber Alfaria Trijaya, Tbk.',
+      'Prior to this ecosystem, financial operations relied on fragmented access management and manual, error-prone spreadsheet workflows. This project resolved these issues by centralizing user authorization and automating complex operational processes like aging calculations, balance netting, and branch report consolidation.',
       'Key Features & Technical Implementations:',
-      '• Automated Aging Engine: Built using Python & Flask to calculate outstanding balances, automate netting of cash differences, and detect negative balance anomalies.',
-      '• Centralized SSO & RBAC: Integrated PyJWT token-based Single Sign-On with Role-Based Access Control to restrict access to sensitive features like data imports.',
-      '• Automated Reconciliation & Subsequent Detection: Processes monthly bulk Excel uploads with pre-storage validation and post-cutoff payment calculation.',
-      '• Executive Dashboard & Reporting: Features real-time KPI cards, DataTables matrix views, and multi-tab Excel report generation (National Summary, Branch Recap, Transaction Details) via Pandas and OpenPyXL.',
-      '• Measurable Business Impact: Reduced monthly reconciliation processing time from several days to just minutes while eliminating human calculation errors.'
+      '• Centralized SSO & RBAC: Integrated PyJWT token-based Single Sign-On (HS256) with Role-Based Access Control to connect various sub-applications securely and restrict sensitive features based on corporate hierarchies.',
+      '• Executive Monitoring Dashboard: A real-time suite for tracking monthly outstanding balances, month-over-month trends, aging bucket distributions (B to >B-3), and status severity indicators.',
+      '• Automated Workflows & Bulk Data Import: Data ingestion pipeline for bulk Excel uploads with pre-commit validation, replacing manual CDM tracking and reconciliation processes.',
+      '• Multi-Database & Reporting: Managed backend logic handling multi-schema PostgreSQL and Oracle databases, alongside an automated engine generating formatted, multi-tab Excel reports using Pandas and OpenPyXL.',
+      '• Server Orchestration: Assisted in structuring custom Python scripts (starts_all_servers.py) to run multi-process WSGI production servers (Waitress) concurrently in an on-premise, air-gapped environment.',
+      'Measurable Business Impact: Eliminated multi-login friction, standardized security governance, and transformed manual spreadsheet workflows into automated web processes executed in minutes. The scalable architecture allows seamless integration of future modules without disrupting live services.'
     ]
   }
 ];
